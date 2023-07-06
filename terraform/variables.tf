@@ -39,7 +39,7 @@ variable "ssh_key_name" {
   default = "terraform_test"
 }
 variable "ec2_host_name" {
-  default = "abc.com"
+  default = "jenkins.ansible.com"
 }
 variable "ec2_creation_date" {
   default = "2023-07-05"

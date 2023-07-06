@@ -3,13 +3,13 @@
 locals {
   instance-userdata-ec2 = <<EOF
 #!/bin/bash
-sudo hostnamectl set-hostname ec2.${var.ec2_host_name}
+sudo hostnamectl set-hostname ${var.ec2_host_name}
 EOF
 }
 
 # security group
 resource "aws_security_group" "ec2_sg" {
-    name    = "ec2.${var.ec2_host_name}-sg"
+    name    = "${var.ec2_host_name}-sg"
     description = var.ec2_sg_description
     vpc_id = var.vpc_id
     // ingress rules
@@ -100,7 +100,7 @@ resource "aws_instance" "ec2_instance" {
 
 
     tags = {
-        Name = "ec2.${var.ec2_host_name}"   
+        Name = "${var.ec2_host_name}"   
         Creation_date = var.ec2_creation_date
     }
     depends_on = [ aws_security_group.ec2_sg]

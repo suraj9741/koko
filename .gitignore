@@ -1,0 +1,6 @@
+# terrform files
+terraform/.terraform
+terraform/.terraform.lock.hcl
+
+# ingnore idea
+.idea
