@@ -1,7 +1,7 @@
 {
   "version": 4,
   "terraform_version": "1.3.5",
-  "serial": 9,
+  "serial": 17,
   "lineage": "bd81c3a1-fb5e-b2e0-108d-d6127f19a783",
   "outputs": {},
   "resources": [
@@ -17,7 +17,7 @@
           "schema_version": 1,
           "attributes": {
             "ami": "ami-0f5ee92e2d63afc18",
-            "arn": "arn:aws:ec2:ap-south-1:264511188693:instance/i-002c33520bc2381ba",
+            "arn": "arn:aws:ec2:ap-south-1:264511188693:instance/i-098ba969076698c4e",
             "associate_public_ip_address": true,
             "availability_zone": "ap-south-1b",
             "capacity_reservation_specification": [
@@ -55,7 +55,7 @@
             "host_id": "",
             "host_resource_group_arn": null,
             "iam_instance_profile": "",
-            "id": "i-002c33520bc2381ba",
+            "id": "i-098ba969076698c4e",
             "instance_initiated_shutdown_behavior": "stop",
             "instance_lifecycle": "",
             "instance_market_options": [],
@@ -84,8 +84,8 @@
             "password_data": "",
             "placement_group": "",
             "placement_partition_number": 0,
-            "primary_network_interface_id": "eni-0ff6812962c2d61d6",
-            "private_dns": "ip-172-31-11-29.ap-south-1.compute.internal",
+            "primary_network_interface_id": "eni-08dccd1a519cbf42f",
+            "private_dns": "ip-172-31-3-151.ap-south-1.compute.internal",
             "private_dns_name_options": [
               {
                 "enable_resource_name_dns_a_record": false,
@@ -93,9 +93,9 @@
                 "hostname_type": "ip-name"
               }
             ],
-            "private_ip": "172.31.11.29",
-            "public_dns": "ec2-65-2-63-147.ap-south-1.compute.amazonaws.com",
-            "public_ip": "65.2.63.147",
+            "private_ip": "172.31.3.151",
+            "public_dns": "ec2-3-111-37-154.ap-south-1.compute.amazonaws.com",
+            "public_ip": "3.111.37.154",
             "root_block_device": [
               {
                 "delete_on_termination": true,
@@ -105,7 +105,7 @@
                 "kms_key_id": "",
                 "tags": null,
                 "throughput": 125,
-                "volume_id": "vol-03c68387671bfd4d5",
+                "volume_id": "vol-04a8d5e101b07a1c3",
                 "volume_size": 30,
                 "volume_type": "gp3"
               }
@@ -132,7 +132,7 @@
             "user_data_replace_on_change": false,
             "volume_tags": null,
             "vpc_security_group_ids": [
-              "sg-02eb816604b01bdcf"
+              "sg-0766392d1a8f65feb"
             ]
           },
           "sensitive_attributes": [],
@@ -153,7 +153,7 @@
         {
           "schema_version": 1,
           "attributes": {
-            "arn": "arn:aws:ec2:ap-south-1:264511188693:security-group/sg-02eb816604b01bdcf",
+            "arn": "arn:aws:ec2:ap-south-1:264511188693:security-group/sg-0766392d1a8f65feb",
             "description": "abc.com-sg(Managed by Terraform)",
             "egress": [
               {
@@ -170,7 +170,7 @@
                 "to_port": 0
               }
             ],
-            "id": "sg-02eb816604b01bdcf",
+            "id": "sg-0766392d1a8f65feb",
             "ingress": [
               {
                 "cidr_blocks": [

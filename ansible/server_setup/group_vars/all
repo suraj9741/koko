@@ -1,0 +1,5 @@
+---
+container_name: ubuntu_test
+container_image: ubuntu
+container_command: sleep 1d
+container_count: 1

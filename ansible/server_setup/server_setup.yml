@@ -1,0 +1,26 @@
+# An Ansible playbook to deploy the Perfios scripts project
+
+- name: collect the sudo password
+  hosts: all
+  become: true
+  gather_facts: true
+  vars_prompt:
+    # - name: "sudo_password"
+    #   prompt: "Enter Sudo Password"
+    #   private: yes
+
+  tasks:
+    - set_fact:
+        # ansible_sudo_pass: "{{ sudo_password }}"
+        ansible_sudo_pass: "test"
+      tags:
+        - deploy
+
+- name: configure servre with install docker
+  hosts: all
+  become: true
+  become_method: sudo
+  tags:
+    - deploy
+  roles:
+    - role: install_docker
