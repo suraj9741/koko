@@ -1,8 +1,8 @@
 {
   "version": 4,
   "terraform_version": "1.3.5",
-  "serial": 3,
-  "lineage": "974b89a8-ff9e-d162-98a4-24c45110aad1",
+  "serial": 9,
+  "lineage": "bd81c3a1-fb5e-b2e0-108d-d6127f19a783",
   "outputs": {},
   "resources": [
     {
@@ -17,7 +17,7 @@
           "schema_version": 1,
           "attributes": {
             "ami": "ami-0f5ee92e2d63afc18",
-            "arn": "arn:aws:ec2:ap-south-1:264511188693:instance/i-081f2952000ace576",
+            "arn": "arn:aws:ec2:ap-south-1:264511188693:instance/i-002c33520bc2381ba",
             "associate_public_ip_address": true,
             "availability_zone": "ap-south-1b",
             "capacity_reservation_specification": [
@@ -55,7 +55,7 @@
             "host_id": "",
             "host_resource_group_arn": null,
             "iam_instance_profile": "",
-            "id": "i-081f2952000ace576",
+            "id": "i-002c33520bc2381ba",
             "instance_initiated_shutdown_behavior": "stop",
             "instance_lifecycle": "",
             "instance_market_options": [],
@@ -84,8 +84,8 @@
             "password_data": "",
             "placement_group": "",
             "placement_partition_number": 0,
-            "primary_network_interface_id": "eni-09ce78ba3e8ccb24d",
-            "private_dns": "ip-172-31-3-236.ap-south-1.compute.internal",
+            "primary_network_interface_id": "eni-0ff6812962c2d61d6",
+            "private_dns": "ip-172-31-11-29.ap-south-1.compute.internal",
             "private_dns_name_options": [
               {
                 "enable_resource_name_dns_a_record": false,
@@ -93,9 +93,9 @@
                 "hostname_type": "ip-name"
               }
             ],
-            "private_ip": "172.31.3.236",
-            "public_dns": "ec2-13-126-207-175.ap-south-1.compute.amazonaws.com",
-            "public_ip": "13.126.207.175",
+            "private_ip": "172.31.11.29",
+            "public_dns": "ec2-65-2-63-147.ap-south-1.compute.amazonaws.com",
+            "public_ip": "65.2.63.147",
             "root_block_device": [
               {
                 "delete_on_termination": true,
@@ -105,34 +105,34 @@
                 "kms_key_id": "",
                 "tags": null,
                 "throughput": 125,
-                "volume_id": "vol-0096d0019fe5b2972",
+                "volume_id": "vol-03c68387671bfd4d5",
                 "volume_size": 30,
                 "volume_type": "gp3"
               }
             ],
             "secondary_private_ips": [],
             "security_groups": [
-              "application.suraj.com-sg"
+              "jenkins.suraj.com-sg"
             ],
             "source_dest_check": true,
             "spot_instance_request_id": "",
             "subnet_id": "subnet-033f2276319b6ebfe",
             "tags": {
               "Creation_date": "2023-07-05",
-              "Name": "application.suraj.com"
+              "Name": "jenkins.suraj.com"
             },
             "tags_all": {
               "Creation_date": "2023-07-05",
-              "Name": "application.suraj.com"
+              "Name": "jenkins.suraj.com"
             },
             "tenancy": "default",
             "timeouts": null,
             "user_data": null,
-            "user_data_base64": "IyEvYmluL2Jhc2gKc3VkbyBob3N0bmFtZWN0bCBzZXQtaG9zdG5hbWUgYXBwbGljYXRpb24uc3VyYWouY29tCg==",
+            "user_data_base64": "IyEvYmluL2Jhc2gKc3VkbyBob3N0bmFtZWN0bCBzZXQtaG9zdG5hbWUgamVua2lucy5zdXJhai5jb20K",
             "user_data_replace_on_change": false,
             "volume_tags": null,
             "vpc_security_group_ids": [
-              "sg-0c2f0c189d490b507"
+              "sg-02eb816604b01bdcf"
             ]
           },
           "sensitive_attributes": [],
@@ -153,7 +153,7 @@
         {
           "schema_version": 1,
           "attributes": {
-            "arn": "arn:aws:ec2:ap-south-1:264511188693:security-group/sg-0c2f0c189d490b507",
+            "arn": "arn:aws:ec2:ap-south-1:264511188693:security-group/sg-02eb816604b01bdcf",
             "description": "abc.com-sg(Managed by Terraform)",
             "egress": [
               {
@@ -170,7 +170,7 @@
                 "to_port": 0
               }
             ],
-            "id": "sg-0c2f0c189d490b507",
+            "id": "sg-02eb816604b01bdcf",
             "ingress": [
               {
                 "cidr_blocks": [
@@ -225,7 +225,7 @@
                 "to_port": 0
               }
             ],
-            "name": "application.suraj.com-sg",
+            "name": "jenkins.suraj.com-sg",
             "name_prefix": "",
             "owner_id": "264511188693",
             "revoke_rules_on_delete": false,
