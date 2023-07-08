@@ -1,5 +1,4 @@
 ---
-container_name: ubuntu_test
-container_image: ubuntu
-container_command: sleep 1d
+container_name: rancher
+container_image: rancher/rancher:latest
 container_count: 1

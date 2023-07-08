@@ -1,0 +1,22 @@
+---
+- name: Install k8s pakages  
+  snap:
+    name: "{{ item }}"
+    classic: true
+  loop: 
+    - kubectl
+    - helm
+
+- name: Create default containers
+  community.docker.docker_container:
+    name: "{{ container_name }}{{ item }}"
+    image: "{{ container_image }}"
+    state: started
+    privileged: true
+    detach: true
+    ports:
+     - "80:80"
+     - "443:443"
+     - "30038:30038"
+     - "30042:30042"
+  with_sequence: count={{ container_count }}
