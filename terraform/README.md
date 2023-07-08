@@ -1,8 +1,15 @@
 ## Terraform script for create a server with VPC or Without VPC
+### Variable Changes
+- [Creation of VPC need to do following changes](#creation-of-vpc-need-to-do-following-changes)
+- [Use existing VPC need to do following changes](#use-existing-vpc-need-to-do-following-changes)
+- [server creation need to do following changes](#server-creation-need-to-do-following-changes)
+### Run scrips
+- [How to run the script](#how-to-run-the-script)
 
-### For Creation of VPC need to do following changes
+---
+### Creation of VPC need to do following changes
 
-- variable need to change as per your requirement inside `/terraform/variables.tf`
+- variable need to change as per your requirement inside [variables.tf](variables.tf) 
 
     -   **existing_vpc**: This variable is you need to set true/false if its true then it will use existing resources and if its false then it will create new resources. for us now we need to set as **false**
     
@@ -14,10 +21,10 @@
 
     -   **availability_zone** : Give the availability zone where you want to create subnet 
 
-- Need to change inside `/terraform/vpc/output.tf` this file. If we are creating VPC then we need to uncomment all data inside the file
-
-### For use existing VPC need to do following changes
-- variable need to change as per your requirement inside `/terraform/variables.tf`
+- Need to change inside [terraform/vpc/output.tf](vpc/output.tf) this file. If we are creating VPC then we need to uncomment all data inside the file
+---
+### Use existing VPC need to do following changes
+- variable need to change as per your requirement inside [variables.tf](variables.tf)
 
     -   **existing_vpc**: This variable is you need to set true/false if its true then it will use existing resources and if its false then it will create new resources. For us now we need to set as **true**
 
@@ -29,11 +36,11 @@
 
     -   **availability_zone** : Give the availability zone same that should match with above you provided subnets  
 
-- Need to change inside `/terraform/vpc/output.tf` this file. If we are using existing VPC then we need to comment all data inside the file
+- Need to change inside [/terraform/vpc/output.tf](vpc/output.tf) this file. If we are using existing VPC then we need to comment all data inside the file
+---
+### server creation need to do following changes
 
-### For server creation need to do following changes
-
-- variable need to change as per your requirement inside `/terraform/variables.tf`
+- variable need to change as per your requirement inside [variables.tf](variables.tf)
   - **ssh_key_name**: Check available keys inside AWS account and provide name here
   - **ec2_host_name**: Provide hostname which you want to give to the server
   - **ec2_creation_date**: This is extra variable today's date we should provide
@@ -44,8 +51,8 @@
   - **ec2_ispublic**: do want to assine public ip for this server or not according you need provide boolean value (true/false) in our case we want server in public so we are provideing **true**
   - **ec2_disable_api_termination**: this is server termination permission this value is on boolean (true/false) 
   - **ec2_instance_count**: how many instance you want to create enter the number here 
-
-## How to run the script 
+---
+## How to run the script
 - Configure AWS credentials 
 ```shell
 aws configure

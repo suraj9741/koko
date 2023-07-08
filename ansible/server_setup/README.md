@@ -1,6 +1,12 @@
 ## Set up the k8s environment 
-
-### Ansible script information 
+- [Ansible script information](#ansible-script-information)
+- [How to run the ansible script](#how-to-run-the-ansible-script)
+- [Test script runs proper or not](#test-script-runs-proper-or-not)
+- [Configure Rancher](#configure-rancher)
+- [Configure kubectl in server](#configure-kubectl-in-server)
+- [Access My cluster](#access-my-cluster)
+---
+### Ansible script information
 
 - This ansible script will do below deployment 
   - In Install Docker role 
@@ -12,15 +18,15 @@
     - Start rancher container
 
 - For k8s cluster I am using `Rancher` tool I deploy single node k8s cluster.
-
+---
 ### How to run the ansible script
 
-- Change hosts as per requirement in host file `server_setup/hosts`
+- Change hosts as per requirement in host file [hosts](hosts)
 - Run the script 
 ```shell
 ansible-playbook server_setup.yml -i hosts
 ```
-
+---
 ### Test script runs proper or not
 - login into server 
 - check rancher container is running or not 
@@ -35,8 +41,8 @@ kubectl version --client
 ```shell
 helm version
 ```
-
-### Configure Rancher 
+---
+### Configure Rancher
 
 - Open browser and type `server ip`
 - First time login need to search rancher password
@@ -50,7 +56,7 @@ docker ps | grep 'rancher'
 docker logs  container-id  2>&1 | grep "Bootstrap Password:"
 ```
 - Create you own password and your default user is `admin`
-
+---
 ### Configure kubectl in server
 - Log in Rancher
 - Download kubeconfig file 
@@ -70,9 +76,10 @@ docker logs  container-id  2>&1 | grep "Bootstrap Password:"
   
 ## Congratulation Setup Completed 
 
-## For access My cluster
+---
+## Access My cluster
 ```
 Username: koko-user
 Password: admin@0987654321
 ```
-URL: https://15.206.198.240/dashboard/auth/login
+URL: [Rancher](https://15.206.198.240/dashboard/auth/login)
