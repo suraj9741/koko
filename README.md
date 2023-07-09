@@ -1,11 +1,19 @@
+- [Server creation and configuration](#server-creation-and-configuration)
+- [Deployment](#deployment)
+  - [Build and push](#build-and-push)
+  - [Helm chart and deployment](#helm-chart-and-deployment)
+  - [Jenkins](#jenkins)
+- [Testing](#testing)
+- [Assignment](#assignment)
+
 ## Server creation and configuration
 - Server created by using terraform script for every instance i maintained state file also take a look
   - [Terraform](terraform/README.md)
 - Server configured and create k8s cluster by using ansible script 
   - [Ansible](ansible/server_setup/README.md)
 ---
-## Deployment 
-### Build and push 
+## Deployment
+### Build and push
 - Code repository created differently so we can push code only 
 - Repository name is [jenkins-pipeline](https://github.com/suraj9741/jenkins-pipeline) take look on this repo
 
@@ -13,7 +21,7 @@
 - K8s deployment repository created differently because if push code pipeline should not trigger automatically 
 - Repository name is [kube-deploy](https://github.com/suraj9741/kube-deploy) take look on this repo
 
-### Jenkins 
+### Jenkins
 - Jenkins server configured
 - Pipeline is configured based on [jenkins-pipeline](https://github.com/suraj9741/jenkins-pipeline) repo if we push code in this repo pipeline will automatically trigger 
 - You can access by using following credential
@@ -23,7 +31,8 @@ Password: admin@123
 ```
 URL: [Jenkins](http://13.233.240.253:8080/)
 
-### Testing 
+---
+## Testing
 - Push code on [jenkins-pipeline](https://github.com/suraj9741/jenkins-pipeline) repo
 - Login to [Jenkins](http://13.233.240.253:8080/) and check [deploy-application-in-k8s](http://13.233.240.253:8080/job/deploy-application-in-k8s/) pipeline will trigger
 - Login to the [Rancher](https://15.206.198.240/dashboard/auth/login) 
@@ -32,8 +41,8 @@ URL: [Jenkins](http://13.233.240.253:8080/)
   - Open browser  
     1. For first test case pest http://15.206.198.240:30038/ this URL msg will prompt
     2. For second test case pest http://15.206.198.240:30038/timeout this URL then after 30sec timeout will prompt
-
-### Assignment 
+---
+### Assignment
 Functional Requirements
 1. Create a simple Python / flask application (e.g Single endpoint in Flask which will return
 some value). 
