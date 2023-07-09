@@ -36,6 +36,10 @@ URL: [Jenkins](http://13.233.240.253:8080/)
 - Push code on [jenkins-pipeline](https://github.com/suraj9741/jenkins-pipeline) repo
 - Login to [Jenkins](http://13.233.240.253:8080/) and check [deploy-application-in-k8s](http://13.233.240.253:8080/job/deploy-application-in-k8s/) pipeline will trigger
 - Login to the [Rancher](https://15.206.198.240/dashboard/auth/login) 
+```
+Username: koko-user
+Password: admin@0987654321
+``` 
   - check pods image name and tag 
   - match pipeline build number and image tag of pod if its matching then pipeline runs successfully
   - Open browser  
